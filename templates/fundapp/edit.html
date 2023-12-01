@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Data</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        Name: <input type="text" name="name" value="{{ user.name }}"><br>
+        Country: <input type="text" name="country" value="{{ user.country }}"><br>
+        Phone: <input type="text" name="phone" value="{{ user.phone }}"><br>
+        Email: <input type="text" name="email" value="{{ user.email }}"><br>
+        Source: <input type="text" name="source" value="{{ user.source }}"><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

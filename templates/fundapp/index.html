@@ -18,16 +18,16 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{% static 'fundapp/assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'fundapp/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'fundapp/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'fundapp/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'fundapp/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'fundapp/assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
-  <link href="{% static 'fundapp/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'fundapp/front/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'fundapp/front/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'fundapp/front/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'fundapp/front/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'fundapp/front/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'fundapp/front/assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'fundapp/front/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'fundapp/assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'fundapp/front/assets/css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -37,7 +37,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html">Fund Reclaimers</a></h1>
+        <h1><a href="{% url 'home' %}">Fund Reclaimers</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -48,6 +48,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
         </ul>
@@ -70,7 +71,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
-          <img src="{% static 'fundapp/assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+          <img src="{% static 'fundapp/front/assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -96,7 +97,7 @@
             <p>
               Initiating the recovery process begins with a brief conversation. Our specialized expertise drives our relentless pursuit to reclaim clients' assets. Throughout, we prioritize guiding and supporting clients, making their financial well-being our utmost concern.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="#contact" class="btn-learn-more">Learn More</a>
           </div>
           
         </div>
@@ -111,7 +112,7 @@
         
         <div class="row">
           <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
-            <img src="{% static 'fundapp/assets/img/counts-img.svg' %}" alt="" class="img-fluid">
+            <img src="{% static 'fundapp/front/assets/img/counts-img.svg' %}" alt="" class="img-fluid">
           </div>
           
           <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
@@ -214,51 +215,51 @@
             </h4>
           </div>
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-1.png' %}" class="img-fluid" alt="" data-aos="zoom-in">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-1.png' %}" class="img-fluid" alt="" data-aos="zoom-in">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-2.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-2.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-3.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-3.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-4.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="300">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-4.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="300">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-5.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="400">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-5.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="400">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-6.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-6.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-7.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-7.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-8.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-8.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-9.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-9.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-10.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-10.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-11.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-11.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="{% static 'fundapp/assets/img/scam_companies/logo-12.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+            <img src="{% static 'fundapp/front/assets/img/scam_companies/logo-12.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
           </div>
 
         </div>
@@ -271,39 +272,39 @@
 
         <div class="row">
           <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card" style='background-image: url("{% static 'fundapp/assets/img/more-services-1.jpg' %}");' data-aos="fade-up" data-aos-delay="100">
+            <div class="card" style='background-image: url("{% static 'fundapp/front/assets/img/more-services-1.jpg' %}");' data-aos="fade-up" data-aos-delay="100">
               <div class="card-body">
                 <h5 class="card-title"><a href="">What makes us the ideal choice?</a></h5>
                 <p class="card-text">In brief: We exclusively handle cases with potential for significant recovery. Transparency is key; we openly evaluate each case. If unfeasible, we'll inform you. When there's a chance for full or partial recovery, we act promptly.</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="#contact"><i class="bi bi-arrow-right"></i> Learn More</a></div>
               </div>
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="card" style='background-image: url("{% static 'fundapp/assets/img/more-services-2.jpg' %}");' data-aos="fade-up" data-aos-delay="200">
+            <div class="card" style='background-image: url("{% static 'fundapp/front/assets/img/moneyback.jpg' %}");' data-aos="fade-up" data-aos-delay="200">
               <div class="card-body">
                 <h5 class="card-title"><a href="">Your money back guarantee</a></h5>
                 <p class="card-text">The fund recovery process demands perseverance and time. Client readiness and trust in us at every stage are crucial. Should any doubts arise, clients can request a full refund within the initial 14 business days of the process.*</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="#contact"><i class="bi bi-arrow-right"></i> Learn More</a></div>
               </div>
             </div>
 
           </div>
           <div class="col-md-6 d-flex align-items-stretch mt-4">
-            <div class="card" style='background-image: url("{% static 'fundapp/assets/img/more-services-3.jpg' %}");' data-aos="fade-up" data-aos-delay="100">
+            <div class="card" style='background-image: url("{% static 'fundapp/front/assets/img/more-services-3.jpg' %}");' data-aos="fade-up" data-aos-delay="100">
               <div class="card-body">
                 <h5 class="card-title"><a href="">Be cautious of imitators and impostors.</a></h5>
-                <p class="card-text">Fraudulent entities often impersonate authentic scam recovery firms, sometimes masquerading as Payback Ltd. Remember, our legitimate emails conclude with @payback-ltd.com for verification.</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <p class="card-text">Fraudulent entities often impersonate authentic scam recovery firms, sometimes masquerading as Fund Reclaimer Ltd. Remember, our legitimate emails conclude with @Fund Reclaimer-ltd.com for verification.</p>
+                <div class="read-more"><a href="#contact"><i class="bi bi-arrow-right"></i> Learn More</a></div>
               </div>
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-stretch mt-4">
-            <div class="card" style='background-image: url("{% static 'fundapp/assets/img/more-services-4.jpg' %}");' data-aos="fade-up" data-aos-delay="200">
+            <div class="card" style='background-image: url("{% static 'fundapp/front/assets/img/more-services-4.jpg' %}");' data-aos="fade-up" data-aos-delay="200">
               <div class="card-body">
                 <h5 class="card-title"><a href="">Is your service provider legitimate?</a></h5>
                 <p class="card-text">Utilize our Blacklist, containing over 11,000 flagged companies identified as scams or frauds by us and various regulatory bodies, to verify if your current service provider is listed.</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="#contact"><i class="bi bi-arrow-right"></i> Learn More</a></div>
               </div>
             </div>
           </div>
@@ -387,7 +388,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static 'fundapp/assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static 'fundapp/front/assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                   <p>
@@ -402,7 +403,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static 'fundapp/assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static 'fundapp/front/assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                   <p>
@@ -417,7 +418,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static 'fundapp/assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static 'fundapp/front/assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                   <p>
@@ -432,7 +433,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static 'fundapp/assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static 'fundapp/front/assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                   <p>
@@ -447,7 +448,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static 'fundapp/assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static 'fundapp/front/assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                   <p>
@@ -480,7 +481,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="{% static 'fundapp/assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'fundapp/front/assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -498,7 +499,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
-                <img src="{% static 'fundapp/assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'fundapp/front/assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -516,7 +517,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="member-img">
-                <img src="{% static 'fundapp/assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'fundapp/front/assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -534,7 +535,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="400">
               <div class="member-img">
-                <img src="{% static 'fundapp/assets/img/team/team-4.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'fundapp/front/assets/img/team/team-4.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -562,11 +563,11 @@
           <h2>Frequently Asked Questions</h2>
         </div>
 
-        <div class="accordion" id="accordionExample">
+        <div class="accordion" id="faq">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Learn more about Payback and the chargeback industry right here
+                Learn more about Fund Reclaimer and the chargeback industry right here
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -578,10 +579,10 @@
                   Many online markets and traders adeptly pose as legitimate authorities, deceiving unsuspecting victims. Falling prey to such scams is not just financially distressing but also damages one's credibility as a buyer or trader. However, all hope is not lost.                  
                 </p>
                 <p>        
-                  PayBack's funds recovery program specializes in helping individuals reclaim what rightfully belongs to them after falling victim to trading scams or fraudulent trade platforms. While funds recovery is an effective method, it's essential to remain vigilant against recovery scams that circulate online amidst the deceptions and frauds on the internet.
+                  Fund Reclaimer's funds recovery program specializes in helping individuals reclaim what rightfully belongs to them after falling victim to trading scams or fraudulent trade platforms. While funds recovery is an effective method, it's essential to remain vigilant against recovery scams that circulate online amidst the deceptions and frauds on the internet.
                 </p>
                 <p>                 
-                  As a legitimate wealth recovery expert, PayBack assists victims worldwide in retrieving their funds, employing skilled experts in scam recovery. Their proficiency extends to the UK, offering comprehensive assistance. To discover more about PayBack and the trade industry, delve into everything you need to know.
+                  As a legitimate wealth recovery expert, Fund Reclaimer assists victims worldwide in retrieving their funds, employing skilled experts in scam recovery. Their proficiency extends to the UK, offering comprehensive assistance. To discover more about Fund Reclaimer and the trade industry, delve into everything you need to know.
                 </p>
               </div>
             </div>
@@ -615,25 +616,25 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Funds recovery with Payback
+                Funds recovery with Fund Reclaimer
               </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <p>
-                  PayBack offers this kind of service with wealth recovery experts and fund recovery specialists – ensuring that you get your investments back from scammers. However, what really is funds recovery?
+                  Fund Reclaimer offers this kind of service with wealth recovery experts and fund recovery specialists – ensuring that you get your investments back from scammers. However, what really is funds recovery?
                 </p>
                 <p>
                   In a nutshell, funds recovery is a service that is both consultative and investigative in its approach. This is a service employed by victims that have been duped by online fraudulent crimes to retrieve their money from bogus merchants and trader scams.
                 </p>
                 <p>
-                  Funds recovery services like PayBack specialize in handling internet scams online and lend a hand in providing refunds and reimbursements to the targets through the use of arguments and disputes, along with digital fingerprints track downs, analysis of cyber transactions, and an in-depth investigation.
+                  Funds recovery services like Fund Reclaimer specialize in handling internet scams online and lend a hand in providing refunds and reimbursements to the targets through the use of arguments and disputes, along with digital fingerprints track downs, analysis of cyber transactions, and an in-depth investigation.
                 </p>
                 <p>
                   Companies that provide funds recovery services have a high chance of a successful crypto scam recovery, Bitcoin scam recovery, scam money recovery, and wealth recovery.
                 </p>
                 <p>
-                  When PayBack receives a complaint from victims, they immediately work and review the details of the situation. For a successful recovery, funds recovery review or scam recovery review of the claims must be done, and pieces of evidence must be gathered.
+                  When Fund Reclaimer receives a complaint from victims, they immediately work and review the details of the situation. For a successful recovery, funds recovery review or scam recovery review of the claims must be done, and pieces of evidence must be gathered.
                 </p>
                 <p>
                   The complaint must be valid, and the terms and conditions of the company must be followed.
@@ -658,8 +659,8 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-about">
-              <h3>Payback</h3>
-              <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+              <h3>Fund Reclaimer</h3>
+              <p>Fund Reclaimer is your trusted ally in recovering lost funds resulting from scams. If you've been a victim of fraudulent activities, our dedicated team of specialists is here to assist you in reclaiming your money. Contact us today for expert support in retrieving funds and taking steps towards financial recovery.</p>
               <div class="social-links">
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -678,7 +679,7 @@
 
               <div>
                 <i class="ri-mail-send-line"></i>
-                <p>info@example.com</p>
+                <p>support@fundreclaimer.com</p>
               </div>
 
               <div>
@@ -730,7 +731,7 @@
         </div>
         <div class="col-lg-6">
           <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <a href="#intro" class="scrollto">Home</a>
+            <a href="#hero" class="scrollto">Home</a>
             <a href="#about" class="scrollto">About</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Use</a>
@@ -743,16 +744,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{% static 'fundapp/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
-  <script src="{% static 'fundapp/assets/vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'fundapp/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'fundapp/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'fundapp/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'fundapp/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'fundapp/assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'fundapp/front/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'fundapp/front/assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'fundapp/front/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'fundapp/front/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'fundapp/front/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'fundapp/front/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'fundapp/front/assets/vendor/php-email-form/validate.js' %}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{% static 'fundapp/assets/js/main.js' %}"></script>
+  <script src="{% static 'fundapp/front/assets/js/main.js' %}"></script>
 
   <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
   <div class="elfsight-app-459bfe64-7e54-410c-abac-b9c3713e95b9" data-elfsight-app-lazy></div>
