@@ -5,19 +5,21 @@ from .models import UserData
 from io import TextIOWrapper 
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def home(request):
     return render(request, 'fundapp/index.html')
 
+@login_required
 def crm(request):
     users = UserData.objects.all()
     return render(request, 'fundapp/crm.html', {'users': users}) 
 
-def upload(request):
-    return render(request, 'fundapp/upload.html') 
-
-
+@login_required
 def upload(request):
     if request.method == 'POST':
         if 'file' in request.FILES:
@@ -43,6 +45,7 @@ def upload(request):
 
     return render(request, 'crm.html')
 
+@login_required
 def edit(request, id):
     user = UserData.objects.get(id=id)
     if request.method == 'POST':
@@ -56,9 +59,31 @@ def edit(request, id):
         return redirect('crm')
     return render(request, 'fundapp/edit.html', {'user': user})
 
-
+@login_required
 def delete(request, id):
     user = UserData.objects.get(id=id)
     user.delete()
     user = UserData.objects.all()
     return redirect('crm')
+
+
+def signin(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(request=request, username=username, password=password)
+        if user is not None:
+            login(request, user) 
+            messages.success(request, "Logged in successfully")
+            
+            # Pass data to the template
+            return redirect("crm")
+        else:
+            messages.error(request, "Bad credentials")
+            return redirect('login')  
+    return render(request, "fundapp/crm.html")
+
+
+def login_user(request):
+    return render(request, 'registration/login.html')

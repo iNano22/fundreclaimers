@@ -8,5 +8,7 @@ path('crm/', views.crm, name="crm"),
 path('upload/', views.upload, name='upload'),
 path('edit/<str:id>/', views.edit, name="edit"),
 path('delete/<str:id>/', views.delete, name="delete"),
+path('login_user/', views.login_user, name='login_user'),
+path('signin/', views.signin, name='signin'),
 
 ]
