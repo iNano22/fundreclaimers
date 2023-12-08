@@ -19,12 +19,16 @@
           Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange
           Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
         -->
-      
         <div class="toolbar">
           <form method="post" action="{% url 'upload' %}" enctype="multipart/form-data" style="display: flex; align-items: center;">
-              {% csrf_token %}
-              <input type="file" name="file" class="btn btn-default" accept=".csv">
-              <button type="submit" class="btn btn-default">Upload CSV</button>
+            <p class="btn">Welcome, {{user.username}}</p>
+            <a href="{% url 'signout' %}" class="btn btn-default">
+              Log out
+            </a>
+            {% if request.user.is_staff %}
+            {% csrf_token %}
+            <input type="file" name="file" class="btn btn-default" accept=".csv">
+            <button type="submit" class="btn btn-default">Upload CSV</button>
           </form>
           {% if request.GET.error %}
               <p>{{ request.GET.error }}</p>
@@ -32,7 +36,9 @@
           {% if request.GET.success %}
               <p>{{ request.GET.success }}</p>
           {% endif %}
-      </div>
+          {% endif %}
+        </div>
+        
       
       
       
@@ -44,11 +50,13 @@
             <th data-field="phone" data-sortable="true">Phone</th>
             <th data-field="email" data-sortable="true">Email</th>
             <th data-field="source" data-sortable="true">Source</th>
+            {% if request.user.is_staff %}
             <th data-field="actions">Actions</th>
+            {% endif %}
             <!--<th data-field="actions" data-formatter="operateFormatter" data-events="operateEvents">Actions</th>-->
           </thead>
           <tbody>
-            {%for user in users %}
+            {%for user in users_data %}
             <tr>
               <td>{{user.id}}</td>
               <td>{{user.name}}</td>
@@ -56,6 +64,7 @@
               <td>{{user.phone}}</td>
               <td>{{user.email}}</td>
               <td>{{user.source}}</td>
+              {% if request.user.is_staff %}
               <td>
                 <a rel="tooltip" title="Edit" class="table-action edit" href="{% url 'edit' user.id %}" title="Edit">
                   <i class="fa fa-edit"></i>
@@ -64,6 +73,7 @@
                   <i class="fa fa-trash"></i>
                 </a>
               </td>
+              {% endif %}
             </tr>
             {% endfor %}
           </tbody>
