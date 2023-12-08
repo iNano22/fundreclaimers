@@ -10,7 +10,8 @@ path('edit/<str:id>/', views.edit, name="edit"),
 path('delete/<str:id>/', views.delete, name="delete"),
 path('login_user/', views.login_user, name='login_user'),
 path('signin/', views.signin, name='signin'),
-path('register/', views.register, name='register'),
+path('signup/', views.signup, name='signup'),
 path('signout/', views.signout, name='signout'),
+path('registration/', views.registration, name='registration'),
 
 ]
